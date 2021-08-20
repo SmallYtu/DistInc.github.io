@@ -77,6 +77,7 @@ function updateTempRockets() {
 	tmp.rockets.sc = getRocketSoftcapStart();
 	tmp.rockets.canRocket = player.distance.gte(ExpantaNum.mul(LAYER_REQS["rockets"][1], tmp.rockets.lrm));
 	if (nerfActive("noRockets")) tmp.rockets.canRocket = false;
+	if (player.tr.active = true) tmp.rockets.canRocket = true;
 	tmp.rockets.layer = new Layer("rockets", tmp.rockets.canRocket, "normal");
 	let mlt5 = mltActive(5);
 	let r = player.rockets;
